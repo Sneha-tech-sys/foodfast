@@ -49,7 +49,7 @@ export default function Food() {
   };
 
   const backgroundStyle = {
-    backgroundImage: 'url(/Assets/bg.jpg)', 
+    backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/bg.jpg)`, 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     position: 'relative',
@@ -78,7 +78,7 @@ export default function Food() {
                   <Filter />
                 </div>
                 <div className="col-lg-2 col-5">
-                  <button data-aos="fade-left"
+                  <button
                     type="button"
                     className="btn w-100"
                     onClick={clearFilters} // Correctly calling clearFilters on button click
@@ -97,10 +97,10 @@ export default function Food() {
                   <p className="text-center text-white">No items found</p>
                 ) : (
                   filteredData.map((curElm) => (
-                    <div className="col-lg-4 mb-2 shadow-lg" data-aos="fade-right" key={curElm.id}>
+                    <div className="col-lg-4 mb-2 shadow-lg" key={curElm.id}>
                       <div className="card text-left mb-2" style={{ backgroundColor: 'transparent', border: '1px solid white' }}>
                         <div className="row">
-                          <div className="col-lg-6 col-6" >
+                          <div className="col-lg-6 col-6">
                             <img id='foodim' src={process.env.PUBLIC_URL + '/' + curElm.img} className="card-img-top" alt={curElm.title} style={{ height: '20vh' }} />
                           </div>
                           <div className="col-lg-6 col-6">

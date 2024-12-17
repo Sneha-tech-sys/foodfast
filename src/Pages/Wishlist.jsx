@@ -13,7 +13,7 @@ export default function Wishlist() {
   };
 
   const backgroundStyle = {
-    backgroundImage: 'url(/Assets/bg.jpg)',  
+    backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/bg.jpg)`,  
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: 'auto', 
@@ -38,21 +38,21 @@ export default function Wishlist() {
           <div className="row mb-3">
             <div className="col-lg-2"></div>
             <div className="col-lg-8">
-              <h2 className="text-center text-white" data-aos="fade-right" style={{ position: 'relative', zIndex: '5' }}>My Wishlist</h2>
+              <h2 className="text-center text-white" style={{ position: 'relative', zIndex: '5' }}>My Wishlist</h2>
             </div>
             <div className="col-lg-2"></div>
           </div>
 
           <div className="row" style={{ position: 'relative', zIndex: '5' }}>
             {wishlist.length === 0 ? (
-              <p data-aos="fade-right" className="text-center text-white">Your wishlist is empty</p>
+              <p className="text-center text-white">Your wishlist is empty</p>
             ) : (
               wishlist.map((item) => (
-                <div className="col-lg-4" data-aos="fade-right" key={item.id}>
+                <div className="col-lg-4" key={item.id}>
                   <div className="card text-left mb-2" style={{ backgroundColor: 'transparent', border: '1px solid white' }}>
                     <div className="row">
                       <div className="col-lg-6 col-6">
-                        <img src={item.image} className="card-img-top" alt={item.name} style={{ height: '18vh' }} />
+                        <img src= {process.env.PUBLIC_URL + '/' + item.image} className="card-img-top" alt={item.name} style={{ height: '18vh' }} />
                       </div>
                       <div className="col-lg-6 col-6">
                         <p className="card-title pt-2" style={{ fontSize: '13px', fontWeight: '600', textAlign: 'left', color: 'orange' }}>

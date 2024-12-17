@@ -5,7 +5,7 @@ export default function Error() {
 
   // Background style for the checkout page
   const backgroundStyle = {
-    backgroundImage: 'url(/Assets/bg.jpg)',
+    backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/bg.jpg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
@@ -26,8 +26,8 @@ export default function Error() {
   return (
     <div style={backgroundStyle}>
       <div style={overlayStyle}></div>
-      <div className="Main" data-aos="fade-right" style={{ position: 'relative', zIndex: '5' ,display:'flex',justifyContent:'center'}}>
-             <img src="Assets/not.png"/>
+      <div className="Main" style={{ position: 'relative', zIndex: '5' ,display:'flex',justifyContent:'center'}}>
+             <img src={`${process.env.PUBLIC_URL}/Assets/not.png`} />
       </div>
     </div>
   );

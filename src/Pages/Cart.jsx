@@ -11,7 +11,7 @@ export default function Cart() {
   const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const backgroundStyle = {
-    backgroundImage: 'url(/Assets/bg.jpg)',
+    backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/bg.jpg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: 'auto',
@@ -32,7 +32,7 @@ export default function Cart() {
     <div style={backgroundStyle}>
       <div style={overlayStyle}></div>
       <div className="Main" style={{ position: 'relative', zIndex: '5' }}>
-        <div className="container row text-white" data-aos="fade-right" id='carth'>
+        <div className="container row text-white" id='carth'>
           <div className="col-lg-2 col-2" id='fonti'>IMAGE</div>
           <div className="col-lg-2 col-2" id='fonti'>PRODUCT</div>
           <div className="col-lg-2 col-2" id='fontiw'>ADDMORE</div>
@@ -43,7 +43,7 @@ export default function Cart() {
 
         <div className="container" style={{ marginTop: '20px', color: 'white', textAlign: 'center' }}>
           {cart.length === 0 ? (
-            <p data-aos="fade-left">Your cart is empty.</p>
+            <p>Your cart is empty.</p>
           ) : (
             <div>
               {cart.map((item) => (
@@ -51,7 +51,7 @@ export default function Cart() {
                   key={item.id}
                   id={item.id}
                   name={item.name}
-                  image={item.image}
+                  image= {process.env.PUBLIC_URL + '/' + item.image}
                   price={item.price}
                   quantity={item.quantity}  // Pass the quantity here
                   removeItem={removeItem}  // Pass the removeItem function
@@ -62,7 +62,7 @@ export default function Cart() {
         </div>
 
         {/* Display the subtotal */}
-        <div className='container text-start mt-5' data-aos="fade-right">
+        <div className='container text-start mt-5'>
           <h5 style={{ color: 'white' }}>Subtotal : 
             <span style={{ fontSize: '29px', color: 'white' }}>
               {totalPrice.toFixed(2)} ₹
@@ -73,7 +73,7 @@ export default function Cart() {
 
         {/* Checkout buttons */}
         <div className='container row mt-5'>
-          <div className='col-lg-2 col-6' data-aos="fade-right">
+          <div className='col-lg-2 col-6'>
             <NavLink to='/food'>
               <button
                 type="button"
@@ -85,7 +85,7 @@ export default function Cart() {
             </NavLink>
           </div>
 
-          <div className='col-lg-2 col-6' data-aos="fade-right">
+          <div className='col-lg-2 col-6'>
             <NavLink to='/checkout'>
               <button
                 type="button"

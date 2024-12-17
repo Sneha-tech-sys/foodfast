@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export default function SignUp() {
  
    const backgroundStyle = {
-    backgroundImage: 'url(/Assets/bg.jpg)',  // Correct path relative to public folder
+    backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/bg.jpg)`,  // Correct path relative to public folder
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     // Full height of the viewport
@@ -101,9 +101,9 @@ export default function SignUp() {
           <div className="sign-up-container" style={{ position: 'relative', 
                 zIndex: '5',
               }}>
-      <h2 data-aos="fade-left">Fill Your Details</h2>
+      <h2>Fill Your Details</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group" data-aos="fade-right">
+        <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -117,7 +117,7 @@ export default function SignUp() {
         </div>
 
 
-        <div className="form-group" data-aos="fade-right">
+        <div className="form-group">
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -130,7 +130,7 @@ export default function SignUp() {
           {errors.password && <p className="error">{errors.password}</p>}
         </div>
 
-        <div className="form-group" data-aos="fade-right">
+        <div className="form-group">
           <label htmlFor="confirmPassword">Confirm Password</label>
           <input
             type="password"
@@ -143,9 +143,9 @@ export default function SignUp() {
           {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
         </div>
 
-            <button data-aos="fade-left" type="submit" className="btn-submit">Sign Up</button>
+            <button type="submit" className="btn-submit">Sign Up</button>
             <div className='d-flex mt-2'>
-              <p data-aos="fade-right" style={{ color: 'lightgray' }}>Create new account </p> &nbsp;&nbsp;
+              <p style={{ color: 'lightgray' }}>Create new account </p> &nbsp;&nbsp;
                 <NavLink to='/signup' style={{color:'orange'}}>
                 <h6>Login</h6> 
               </NavLink>
