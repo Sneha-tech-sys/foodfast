@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Style+Script&display=swap');/* Styles for the slider container */
+.slider-container {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: "Courgette", cursive;
+   
+}
+
+/* Styles for each slider item */
+.slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* Style for the card */
+.slider-card {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    color: white !important;
+    border: 1px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 10px solid orange !important;
+    margin-left: 20px;
+    font-family: "Courgette", cursive;
+}
+
+/* Style for the icon */
+.slider-card .icon {
+    font-size: 19px;
+    color: black;
+    background-color: orange;
+    padding: 10px;
+    width: 15%;
+    height: 50%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Optional: Style the reviews */
+.slider-card p {
+font-family: "Courgette", cursive;
+    font-size: 14px;
+    color: white;
+}
+.topbtn{
+    background-color: transparent;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    color:lightgray;
+    padding: 15px;
+    width:180px;
+    margin-bottom: 12px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+    .slider-card {
+        padding: 15px;
+        margin-left: -0px;
+    }
+
+    .slider-card .icon {
+        font-size: 10px !important;
+        padding: 10px !important;
+        width: 15%;
+            height: 100% !important;
+        /* Smaller icon size on mobile */
+    }
+     
+}
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+#im{
+    height: 9vh !important;
+    width:6vw !important;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .button-container {
+        justify-content: center;
+        gap: 0px !important;
+        margin-left: -30px !important;
+
+    }
+
+    .topbtn {
+       width:80px;
+        font-size: 10px;
+        padding: 7px;
+    }
+}
+
+/* @media (max-width: 576px) {
+    .cart-item-container {
+        flex-direction: column;
+       
+    }
+
+    .cart-item-container .col-3 {
+        width: 100%;
+        
+        margin-bottom: 10px;
+    }
+    #im{
+        height:9vh !important;
+        width: 12vw !important;
+        margin-left: -23px;
+    }
+    #cartpr{
+        margin-left: 3px;
+    }
+    #ic{
+        font-size: 20px !important;
+        margin-left: -10px;
+    }
+    #amo{
+        margin-left: -10px;
+    }
+    #am{
+        margin-left:35px !important;
+        font-size: 19px;
+        font-weight: 700;
+        margin-top: 9px;
+    }
+    #font{
+        font-size: 25px !important;
+        margin-left: 100px !important;
+    }
+    
+} */
+/* Default for larger screens */
+.cart-item {
+    display: flex;
+    align-items: center;
+}
+
+.cart-img {
+    width: 6vw;
+    height: 9vh !important;
+    margin-left: -14px;
+}
+
+.cart-item .cart-name {
+    color: white;
+    margin-left: -14px;
+}
+
+.cart-item .cart-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: -14px;
+}
+
+.cart-item .cart-quantity {
+    color: lightgrey;
+    padding: 0 10px;
+    margin-left: -14px;
+}
+
+.cart-item .cart-price {
+    color: white;
+    margin-left: -14px;
+}
+
+.cart-item .cart-remove-btn {
+    background-color: transparent;
+    color: orange;
+    border: none;
+    cursor: pointer;
+   
+}
+
+/* Responsive for mobile view */
+@media (max-width: 476px) {
+    .cart-item {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        align-items: stretch;
+    }
+
+    .cart-item .col-lg-2 {
+        width: 100%;
+    }
+
+    .cart-btn {
+        font-size: 4px!important;
+    }
+         .cart-price{
+            margin-top: 3px;
+         }
+
+    .cart-item .cart-remove-btn {
+        font-size: 10px !important;
+        color: orange !important;
+        background-color: transparent !important;
+        border: none;
+    }
+    .cart-img{
+            height: 8vh !important;
+            width: 11vw;
+            margin-left: -13px;
+        }
+        #icon{
+            font-size: 18px !important;
+        }
+        #trash{
+            font-size: 24px !important;
+        }
+}

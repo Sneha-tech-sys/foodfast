@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Style+Script&display=swap');
+
+.Main{
+    padding-top: 130px;
+}
+#glass{
+    background: rgba(0,0,0,0.4);
+        box-shadow: 0 8px 32px 0 rgba(68, 73, 147, 0.37);
+        backdrop-filter: blur(2.5px);
+        -webkit-backdrop-filter: blur(2.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+}
+#mainimg img{
+height: 65vh;
+-webkit-filter: drop-shadow(5px 5px 5px orange);
+    filter: drop-shadow(5px 5px 5px orange);
+}
+.heading{
+    font-size: 4rem;
+    color:rgba(255, 166, 0, 0.753) !important;
+    -webkit-filter: drop-shadow(2px 2px 2px orange);
+    filter: drop-shadow(2px 2px 2px orange);
+    line-height: 90px;
+    font-family: "Courgette", cursive;
+}
+.small{
+    font-size: 13px;
+    color:white;
+    font-family: "Courgette", cursive;
+}
+#btn{
+    margin-top: 18px !important;
+    height:8vh;
+    background-color: rgba(255, 166, 0, 0.74);
+    color:black;
+    font-size: 14px;
+    font-family: "Courgette", cursive;
+    width: 12vw;
+    border-radius: 2px;
+}
+#btn:hover{
+   
+    background-color: white !important;
+    color: black;
+}
+#about{
+    height:70vh;
+}
+@media (max-width: 480px) {
+.heading{
+    font-size: 2rem !important;
+    line-height: 35px;
+}
+#mainimg {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#mainimg img {
+   height: 20vh;
+}
+#main{
+display: none;
+}
+#btn{
+    width:28vw;
+    height: 5vh;
+}
+#about{
+    height: 40vh;
+    width: 80vw;
+}
+#mainhead{
+padding-left: 0px !important;
+padding-right: -13px !important;
+}
+#mainhe{
+  font-size: 2rem !important;  
+}
+.card-title{
+    font-size: 23px !important;
+}
+.fa-star{
+    font-size: 25px !important;
+}
+#rate{
+    font-size: 25px !important;
+}
+#price{
+    position: absolute;
+    top:89px;
+    font-size: 18px !important;
+}
+#mainlink{
+    margin-top: 34px;
+}
+}
+/* Smooth transition for the heart icon */
+button i.fa-heart {
+    transition: color 0.3s ease;
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Change heart color when it's active (clicked) */
+button i.fa-heart.active {
+    color: red !important;
+}
+
+/* Optional: Remove hover effect to avoid interfering with the click state */
+button i.fa-heart:hover {
+    color: inherit;
+    /* No hover color change */
+}
+@media (max-width: 480px) {
+    #fonti{
+        font-size: 13px;
+        font-weight: 700;
+        
+       
+    }
+    #carth{
+        margin-left: -12px;
+    }
+    #fontiw{
+        font-size: 13px;
+        font-weight: 700;
+        margin-left: 24px !important;
+    }
+}
+@media (max-width: 360px) {
+#foodim{
+    height:24vh !important;
+}
+}
